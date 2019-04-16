@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  RunLogViewController.swift
 //  Pace
 //
 //  Created by Junior on 16/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class RunLogViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

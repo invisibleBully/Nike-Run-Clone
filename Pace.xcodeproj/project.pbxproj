@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		79A5E1C72265EA9600CB8316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1C62265EA9600CB8316 /* AppDelegate.swift */; };
 		79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1C82265EA9600CB8316 /* RunViewController.swift */; };
-		79A5E1CB2265EA9600CB8316 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1CA2265EA9600CB8316 /* SecondViewController.swift */; };
+		79A5E1CB2265EA9600CB8316 /* RunLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1CA2265EA9600CB8316 /* RunLogViewController.swift */; };
 		79A5E1CE2265EA9600CB8316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1CC2265EA9600CB8316 /* Main.storyboard */; };
 		79A5E1D02265EA9800CB8316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1CF2265EA9800CB8316 /* Assets.xcassets */; };
 		79A5E1D32265EA9800CB8316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1D12265EA9800CB8316 /* LaunchScreen.storyboard */; };
@@ -29,7 +29,7 @@
 		79A5E1C32265EA9600CB8316 /* Pace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5E1C62265EA9600CB8316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A5E1C82265EA9600CB8316 /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
-		79A5E1CA2265EA9600CB8316 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		79A5E1CA2265EA9600CB8316 /* RunLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogViewController.swift; sourceTree = "<group>"; };
 		79A5E1CD2265EA9600CB8316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79A5E1CF2265EA9800CB8316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79A5E1D22265EA9800CB8316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		79A5E1DB2265EE6400CB8316 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				79A5E1CA2265EA9600CB8316 /* SecondViewController.swift */,
+				79A5E1CA2265EA9600CB8316 /* RunLogViewController.swift */,
 				79A5E1C82265EA9600CB8316 /* RunViewController.swift */,
 			);
 			path = Controller;
@@ -234,7 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A5E1CB2265EA9600CB8316 /* SecondViewController.swift in Sources */,
+				79A5E1CB2265EA9600CB8316 /* RunLogViewController.swift in Sources */,
 				79A5E1C72265EA9600CB8316 /* AppDelegate.swift in Sources */,
 				79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */,
 			);
