@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Run-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="RunViewController" customModule="Pace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="QCd-QP-D40">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gav-Xg-nke">
+                                <rect key="frame" x="0.0" y="72" width="375" height="403"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtT-LR-3Bn">
+                                <rect key="frame" x="168" y="30" width="39" height="22"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOr-oC-WdG">
+                                <rect key="frame" x="152" y="505" width="71" height="71"/>
+                                <state key="normal" image="startRunningButton"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Running" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="H1r-aG-CE3">
+                                <rect key="frame" x="151" y="588" width="73" height="15"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyo-rk-ghA">
+                                <rect key="frame" x="307" y="405" width="58" height="58"/>
+                                <state key="normal" image="centerNavButton"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wtT-LR-3Bn" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="10" id="49t-hR-y9J"/>
+                            <constraint firstItem="gav-Xg-nke" firstAttribute="top" secondItem="wtT-LR-3Bn" secondAttribute="bottom" constant="20" id="8cY-G0-K5T"/>
+                            <constraint firstItem="QCd-QP-D40" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="J1Y-Ou-Lbo"/>
+                            <constraint firstItem="Vyo-rk-ghA" firstAttribute="top" secondItem="gav-Xg-nke" secondAttribute="bottom" constant="-70" id="Jel-du-jPF"/>
+                            <constraint firstItem="yOr-oC-WdG" firstAttribute="top" secondItem="gav-Xg-nke" secondAttribute="bottom" constant="30" id="OWz-ei-Vxv"/>
+                            <constraint firstItem="QCd-QP-D40" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="Oyv-6h-Zpu"/>
+                            <constraint firstItem="yOr-oC-WdG" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Pee-Cp-H2p"/>
+                            <constraint firstItem="wtT-LR-3Bn" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="UEE-WW-sgc"/>
+                            <constraint firstAttribute="bottom" secondItem="QCd-QP-D40" secondAttribute="bottom" id="aIJ-zl-sGm"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="gav-Xg-nke" secondAttribute="trailing" id="goR-za-IXj"/>
+                            <constraint firstItem="H1r-aG-CE3" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="oYO-Az-Myw"/>
+                            <constraint firstItem="H1r-aG-CE3" firstAttribute="top" secondItem="yOr-oC-WdG" secondAttribute="bottom" constant="12" id="pbL-zT-6BP"/>
+                            <constraint firstItem="QCd-QP-D40" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="sxi-Lv-QEX"/>
+                            <constraint firstItem="gav-Xg-nke" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="ujK-yH-ApW"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Vyo-rk-ghA" secondAttribute="trailing" constant="10" id="vqA-aS-Cka"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="H1r-aG-CE3" secondAttribute="bottom" constant="15" id="zsA-E6-GBp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" id="acW-dT-cKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Pace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BG" width="375" height="667"/>
+        <image name="centerNavButton" width="58" height="58"/>
+        <image name="second" width="30" height="30"/>
+        <image name="startRunningButton" width="71" height="71"/>
+        <image name="tabbar-runIconGray" width="27" height="28"/>
+    </resources>
+</document>

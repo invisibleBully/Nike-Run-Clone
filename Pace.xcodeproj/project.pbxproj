@@ -8,22 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		79A5E1C72265EA9600CB8316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1C62265EA9600CB8316 /* AppDelegate.swift */; };
-		79A5E1C92265EA9600CB8316 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1C82265EA9600CB8316 /* FirstViewController.swift */; };
+		79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1C82265EA9600CB8316 /* RunViewController.swift */; };
 		79A5E1CB2265EA9600CB8316 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1CA2265EA9600CB8316 /* SecondViewController.swift */; };
 		79A5E1CE2265EA9600CB8316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1CC2265EA9600CB8316 /* Main.storyboard */; };
 		79A5E1D02265EA9800CB8316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1CF2265EA9800CB8316 /* Assets.xcassets */; };
 		79A5E1D32265EA9800CB8316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1D12265EA9800CB8316 /* LaunchScreen.storyboard */; };
+		79A5E1EB2265EF9800CB8316 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1E12265EF9700CB8316 /* Lato-Bold.ttf */; };
+		79A5E1EC2265EF9800CB8316 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1E22265EF9800CB8316 /* Lato-Hairline.ttf */; };
+		79A5E1ED2265EF9800CB8316 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1E32265EF9800CB8316 /* Lato-Italic.ttf */; };
+		79A5E1EE2265EF9800CB8316 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1E42265EF9800CB8316 /* Lato-Black.ttf */; };
+		79A5E1EF2265EF9800CB8316 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1E52265EF9800CB8316 /* Lato-BoldItalic.ttf */; };
+		79A5E1F02265EF9800CB8316 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1E62265EF9800CB8316 /* Lato-Regular.ttf */; };
+		79A5E1F12265EF9800CB8316 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1E72265EF9800CB8316 /* Lato-Light.ttf */; };
+		79A5E1F22265EF9800CB8316 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1E82265EF9800CB8316 /* Lato-HairlineItalic.ttf */; };
+		79A5E1F32265EF9800CB8316 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1E92265EF9800CB8316 /* Lato-LightItalic.ttf */; };
+		79A5E1F42265EF9800CB8316 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1EA2265EF9800CB8316 /* Lato-BlackItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		79A5E1C32265EA9600CB8316 /* Pace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5E1C62265EA9600CB8316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79A5E1C82265EA9600CB8316 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		79A5E1C82265EA9600CB8316 /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		79A5E1CA2265EA9600CB8316 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		79A5E1CD2265EA9600CB8316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79A5E1CF2265EA9800CB8316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79A5E1D22265EA9800CB8316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79A5E1D42265EA9800CB8316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79A5E1E12265EF9700CB8316 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		79A5E1E22265EF9800CB8316 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		79A5E1E32265EF9800CB8316 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		79A5E1E42265EF9800CB8316 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		79A5E1E52265EF9800CB8316 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		79A5E1E62265EF9800CB8316 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		79A5E1E72265EF9800CB8316 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		79A5E1E82265EF9800CB8316 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		79A5E1E92265EF9800CB8316 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		79A5E1EA2265EF9800CB8316 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,81 @@
 		79A5E1C52265EA9600CB8316 /* Pace */ = {
 			isa = PBXGroup;
 			children = (
-				79A5E1C62265EA9600CB8316 /* AppDelegate.swift */,
-				79A5E1C82265EA9600CB8316 /* FirstViewController.swift */,
-				79A5E1CA2265EA9600CB8316 /* SecondViewController.swift */,
-				79A5E1CC2265EA9600CB8316 /* Main.storyboard */,
-				79A5E1CF2265EA9800CB8316 /* Assets.xcassets */,
-				79A5E1D12265EA9800CB8316 /* LaunchScreen.storyboard */,
 				79A5E1D42265EA9800CB8316 /* Info.plist */,
+				79A5E1CF2265EA9800CB8316 /* Assets.xcassets */,
+				79A5E1C62265EA9600CB8316 /* AppDelegate.swift */,
+				79A5E1DB2265EE6400CB8316 /* Controller */,
+				79A5E1DA2265EE5A00CB8316 /* Extension */,
+				79A5E1DE2265EEA500CB8316 /* Model */,
+				79A5E1E02265EEC900CB8316 /* Resource */,
+				79A5E1DF2265EEAC00CB8316 /* Storyboard */,
+				79A5E1DC2265EE7F00CB8316 /* Utility */,
+				79A5E1DD2265EE9F00CB8316 /* View */,
 			);
 			path = Pace;
+			sourceTree = "<group>";
+		};
+		79A5E1DA2265EE5A00CB8316 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		79A5E1DB2265EE6400CB8316 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				79A5E1CA2265EA9600CB8316 /* SecondViewController.swift */,
+				79A5E1C82265EA9600CB8316 /* RunViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		79A5E1DC2265EE7F00CB8316 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		79A5E1DD2265EE9F00CB8316 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79A5E1DE2265EEA500CB8316 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		79A5E1DF2265EEAC00CB8316 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				79A5E1D12265EA9800CB8316 /* LaunchScreen.storyboard */,
+				79A5E1CC2265EA9600CB8316 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		79A5E1E02265EEC900CB8316 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				79A5E1E42265EF9800CB8316 /* Lato-Black.ttf */,
+				79A5E1EA2265EF9800CB8316 /* Lato-BlackItalic.ttf */,
+				79A5E1E12265EF9700CB8316 /* Lato-Bold.ttf */,
+				79A5E1E52265EF9800CB8316 /* Lato-BoldItalic.ttf */,
+				79A5E1E22265EF9800CB8316 /* Lato-Hairline.ttf */,
+				79A5E1E82265EF9800CB8316 /* Lato-HairlineItalic.ttf */,
+				79A5E1E32265EF9800CB8316 /* Lato-Italic.ttf */,
+				79A5E1E72265EF9800CB8316 /* Lato-Light.ttf */,
+				79A5E1E92265EF9800CB8316 /* Lato-LightItalic.ttf */,
+				79A5E1E62265EF9800CB8316 /* Lato-Regular.ttf */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +211,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A5E1EE2265EF9800CB8316 /* Lato-Black.ttf in Resources */,
 				79A5E1D32265EA9800CB8316 /* LaunchScreen.storyboard in Resources */,
+				79A5E1EC2265EF9800CB8316 /* Lato-Hairline.ttf in Resources */,
+				79A5E1EF2265EF9800CB8316 /* Lato-BoldItalic.ttf in Resources */,
+				79A5E1F02265EF9800CB8316 /* Lato-Regular.ttf in Resources */,
+				79A5E1F42265EF9800CB8316 /* Lato-BlackItalic.ttf in Resources */,
+				79A5E1F12265EF9800CB8316 /* Lato-Light.ttf in Resources */,
+				79A5E1F22265EF9800CB8316 /* Lato-HairlineItalic.ttf in Resources */,
+				79A5E1F32265EF9800CB8316 /* Lato-LightItalic.ttf in Resources */,
 				79A5E1D02265EA9800CB8316 /* Assets.xcassets in Resources */,
 				79A5E1CE2265EA9600CB8316 /* Main.storyboard in Resources */,
+				79A5E1ED2265EF9800CB8316 /* Lato-Italic.ttf in Resources */,
+				79A5E1EB2265EF9800CB8316 /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +236,7 @@
 			files = (
 				79A5E1CB2265EA9600CB8316 /* SecondViewController.swift in Sources */,
 				79A5E1C72265EA9600CB8316 /* AppDelegate.swift in Sources */,
-				79A5E1C92265EA9600CB8316 /* FirstViewController.swift in Sources */,
+				79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
