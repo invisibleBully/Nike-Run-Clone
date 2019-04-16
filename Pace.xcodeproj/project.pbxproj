@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		795FA1C922663D58009C490C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FA1C822663D58009C490C /* LocationViewController.swift */; };
 		79A5E1C72265EA9600CB8316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1C62265EA9600CB8316 /* AppDelegate.swift */; };
 		79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1C82265EA9600CB8316 /* RunViewController.swift */; };
 		79A5E1CB2265EA9600CB8316 /* RunLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1CA2265EA9600CB8316 /* RunLogViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		795FA1C822663D58009C490C /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		79A5E1C32265EA9600CB8316 /* Pace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5E1C62265EA9600CB8316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A5E1C82265EA9600CB8316 /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				79A5E1CA2265EA9600CB8316 /* RunLogViewController.swift */,
 				79A5E1C82265EA9600CB8316 /* RunViewController.swift */,
+				795FA1C822663D58009C490C /* LocationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				79A5E1CB2265EA9600CB8316 /* RunLogViewController.swift in Sources */,
 				79A5E1C72265EA9600CB8316 /* AppDelegate.swift in Sources */,
 				79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */,
+				795FA1C922663D58009C490C /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

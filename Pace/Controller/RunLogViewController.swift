@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RunLogViewController: UIViewController {
+class RunLogViewController: LocationViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
