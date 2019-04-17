@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import MapKit
 
-class OnRunViewController: LocationViewController {
+class CurrentRunViewController: LocationViewController {
     
     
-    
+
     @IBOutlet weak var swipeBackgroundImageView: UIImageView!
     @IBOutlet weak var sliderImageView: UIImageView!
+    
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var paceLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var pauseButton: UIButton!
+    
+    
+    var startLocation: CLLocation!
+    var lastLocation: CLLocation!
+    var runDistance: Double = 0.0
+    
     
     
     override func viewDidLoad() {
@@ -24,7 +36,29 @@ class OnRunViewController: LocationViewController {
         sliderImageView.isUserInteractionEnabled = true
     }
     
+    
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        locationManager?.delegate = self
+        locationManager?.distanceFilter = 10
+        startRun()
+    }
+    
+    func startRun(){
+        locationManager?.startUpdatingLocation()
+    }
+    
+    
+    func endRun(){
+        locationManager?.stopUpdatingLocation()
+    }
+    
+    
+
+    @IBAction func pauseButtonPressed(_ sender: Any) {
+        
+    }
     
     
     @objc func endRunSwipe(sender: UIPanGestureRecognizer){
@@ -40,6 +74,7 @@ class OnRunViewController: LocationViewController {
                 } else if sliderView.center.x >= (swipeBackgroundImageView.center.x + maximumAdjust) {
                     sliderView.center.x = swipeBackgroundImageView.center.x + maximumAdjust
                     //end run code
+                    
                     self.dismiss(animated: true, completion: nil)
                 }else{
                     sliderView.center.x = self.swipeBackgroundImageView.center.x - minimumAdjust
@@ -56,5 +91,26 @@ class OnRunViewController: LocationViewController {
     }
     
     
-   
+}
+
+
+extension CurrentRunViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse{
+            checkLocationAuthStatus()
+        }
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if startLocation == nil {
+            startLocation = locations.first
+        }else if let location = locations.last {
+            runDistance += lastLocation.distance(from: location)
+            distanceLabel.text = "\(runDistance)"
+        }
+        lastLocation = locations.last
+    }
+    
 }

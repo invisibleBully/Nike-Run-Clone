@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--On Run View Controller-->
+        <!--Current Run View Controller-->
         <scene sceneID="eLO-Xq-DZU">
             <objects>
-                <viewController id="IFo-oz-uXX" customClass="OnRunViewController" customModule="Pace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IFo-oz-uXX" customClass="CurrentRunViewController" customModule="Pace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uig-WR-ewc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPh-fD-5vs">
-                                <rect key="frame" x="131.5" y="88" width="112.5" height="34"/>
+                                <rect key="frame" x="131" y="87" width="113" height="34"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="28"/>
                                 <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -176,6 +176,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gP-vM-zV3">
                                 <rect key="frame" x="254" y="552" width="75" height="75"/>
                                 <state key="normal" image="pauseButton"/>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="IFo-oz-uXX" eventType="touchUpInside" id="Dss-ZG-J14"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunButton" translatesAutoresizingMaskIntoConstraints="NO" id="CKb-zJ-Am6">
                                 <rect key="frame" x="54" y="561" width="57" height="57"/>
@@ -201,7 +204,7 @@
                             <constraint firstItem="WuT-Jt-vvf" firstAttribute="centerX" secondItem="uig-WR-ewc" secondAttribute="centerX" id="J8j-2n-Ddr"/>
                             <constraint firstItem="vAJ-b3-PJ0" firstAttribute="top" secondItem="WKv-z9-weN" secondAttribute="bottom" constant="40" id="KmT-hT-AeE"/>
                             <constraint firstItem="WKv-z9-weN" firstAttribute="trailing" secondItem="avb-3R-fZU" secondAttribute="trailing" id="MDy-LH-aKq"/>
-                            <constraint firstItem="WKv-z9-weN" firstAttribute="top" secondItem="mPh-fD-5vs" secondAttribute="bottom" constant="60" id="P4h-fH-lsH"/>
+                            <constraint firstItem="WKv-z9-weN" firstAttribute="top" secondItem="mPh-fD-5vs" secondAttribute="bottom" constant="61" id="P4h-fH-lsH"/>
                             <constraint firstItem="RkT-DZ-Weq" firstAttribute="bottom" secondItem="uig-WR-ewc" secondAttribute="bottom" id="Srb-K6-UWZ"/>
                             <constraint firstItem="mPh-fD-5vs" firstAttribute="centerX" secondItem="uig-WR-ewc" secondAttribute="centerX" id="TIE-JE-PTE"/>
                             <constraint firstItem="Myq-qw-TNw" firstAttribute="centerX" secondItem="uig-WR-ewc" secondAttribute="centerX" constant="-25" id="UMO-6F-UNG"/>
@@ -210,12 +213,16 @@
                             <constraint firstItem="Myq-qw-TNw" firstAttribute="leading" secondItem="CKb-zJ-Am6" secondAttribute="trailing" constant="-64.5" id="pdZ-qR-vvm"/>
                             <constraint firstItem="7gP-vM-zV3" firstAttribute="centerY" secondItem="Myq-qw-TNw" secondAttribute="centerY" id="reK-te-5bH"/>
                             <constraint firstItem="pBy-Vw-FZS" firstAttribute="centerY" secondItem="WKv-z9-weN" secondAttribute="centerY" id="v7I-0P-RqB"/>
-                            <constraint firstItem="mPh-fD-5vs" firstAttribute="top" secondItem="WuT-Jt-vvf" secondAttribute="bottom" constant="36" id="yHk-QQ-AA4"/>
+                            <constraint firstItem="mPh-fD-5vs" firstAttribute="top" secondItem="WuT-Jt-vvf" secondAttribute="bottom" constant="35" id="yHk-QQ-AA4"/>
                             <constraint firstItem="CKb-zJ-Am6" firstAttribute="centerY" secondItem="Myq-qw-TNw" secondAttribute="centerY" id="ywV-dn-F9b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="avb-3R-fZU"/>
                     </view>
                     <connections>
+                        <outlet property="distanceLabel" destination="PyH-pB-IAA" id="W2j-jk-fRm"/>
+                        <outlet property="durationLabel" destination="mPh-fD-5vs" id="bz7-oZ-oYb"/>
+                        <outlet property="paceLabel" destination="7IQ-xC-ZpP" id="bSd-OM-ydy"/>
+                        <outlet property="pauseButton" destination="7gP-vM-zV3" id="LFG-Bi-HPg"/>
                         <outlet property="sliderImageView" destination="CKb-zJ-Am6" id="2CF-7S-w4b"/>
                         <outlet property="swipeBackgroundImageView" destination="Myq-qw-TNw" id="7iw-3e-Ivj"/>
                     </connections>
