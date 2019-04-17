@@ -20,11 +20,12 @@ class CurrentRunViewController: LocationViewController {
     @IBOutlet weak var paceLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var pauseButton: UIButton!
-    
+    var timer = Timer()
     
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
     var runDistance: Double = 0.0
+    var timerCount = 0
     
     
     
@@ -47,6 +48,7 @@ class CurrentRunViewController: LocationViewController {
     
     func startRun(){
         locationManager?.startUpdatingLocation()
+        startTimer()
     }
     
     
@@ -55,10 +57,24 @@ class CurrentRunViewController: LocationViewController {
     }
     
     
+    
+    func startTimer(){
+        durationLabel.text = timerCount.formatTimeToString()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+    }
+    
+    
+    @objc func updateCounter(){
+        timerCount += 1
+        durationLabel.text = timerCount.formatTimeToString()
+    }
+    
 
     @IBAction func pauseButtonPressed(_ sender: Any) {
         
     }
+    
+    
     
     
     @objc func endRunSwipe(sender: UIPanGestureRecognizer){
