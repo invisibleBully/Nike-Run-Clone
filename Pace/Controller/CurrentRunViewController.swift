@@ -24,8 +24,9 @@ class CurrentRunViewController: LocationViewController {
     
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
-    var runDistance: Double = 0.0
+    var runDistance = 0.0
     var timerCount = 0
+    var pace = 0
     
     
     
@@ -61,6 +62,14 @@ class CurrentRunViewController: LocationViewController {
     func startTimer(){
         durationLabel.text = timerCount.formatTimeToString()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+    }
+    
+    
+    
+    func calculatePace(time seconds: Int, miles: Double) -> String{
+        pace = Int(Double(seconds) / miles)
+        print("Pace: \(pace)")
+        return pace.formatTimeToString()
     }
     
     
@@ -125,6 +134,9 @@ extension CurrentRunViewController: CLLocationManagerDelegate {
         }else if let location = locations.last {
             runDistance += lastLocation.distance(from: location)
             distanceLabel.text = "\(runDistance.metersToMiles(places: 2))"
+            if timerCount > 0 && runDistance > 0 {
+                paceLabel.text = calculatePace(time: timerCount, miles: runDistance.metersToMiles(places: 2))
+            }
         }
         lastLocation = locations.last
     }
