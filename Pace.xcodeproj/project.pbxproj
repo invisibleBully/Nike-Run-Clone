@@ -25,6 +25,7 @@
 		79A5E1F32265EF9800CB8316 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1E92265EF9800CB8316 /* Lato-LightItalic.ttf */; };
 		79A5E1F42265EF9800CB8316 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79A5E1EA2265EF9800CB8316 /* Lato-BlackItalic.ttf */; };
 		79A60DCB226738CA00BCD2F7 /* CurrentRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A60DCA226738CA00BCD2F7 /* CurrentRunViewController.swift */; };
+		79A60DCD22676B1900BCD2F7 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A60DCC22676B1900BCD2F7 /* Double+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		79A5E1E92265EF9800CB8316 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		79A5E1EA2265EF9800CB8316 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		79A60DCA226738CA00BCD2F7 /* CurrentRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunViewController.swift; sourceTree = "<group>"; };
+		79A60DCC22676B1900BCD2F7 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		79A5E1DA2265EE5A00CB8316 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				79A60DCC22676B1900BCD2F7 /* Double+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				79A60DCB226738CA00BCD2F7 /* CurrentRunViewController.swift in Sources */,
 				79A5E1CB2265EA9600CB8316 /* RunLogViewController.swift in Sources */,
+				79A60DCD22676B1900BCD2F7 /* Double+Extension.swift in Sources */,
 				79A5E1C72265EA9600CB8316 /* AppDelegate.swift in Sources */,
 				79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */,
 				795FA1C922663D58009C490C /* LocationViewController.swift in Sources */,
