@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--View Controller-->
+        <!--On Run View Controller-->
         <scene sceneID="eLO-Xq-DZU">
             <objects>
-                <viewController id="IFo-oz-uXX" sceneMemberID="viewController">
+                <viewController id="IFo-oz-uXX" customClass="OnRunViewController" customModule="Pace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uig-WR-ewc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,6 +215,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="avb-3R-fZU"/>
                     </view>
+                    <connections>
+                        <outlet property="sliderImageView" destination="CKb-zJ-Am6" id="2CF-7S-w4b"/>
+                        <outlet property="swipeBackgroundImageView" destination="Myq-qw-TNw" id="7iw-3e-Ivj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7B-e6-3D1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
