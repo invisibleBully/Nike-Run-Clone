@@ -175,6 +175,11 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gP-vM-zV3">
                                 <rect key="frame" x="254" y="552" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="1Ef-ri-o8f"/>
+                                    <constraint firstAttribute="width" constant="75" id="5Pc-0p-HRO"/>
+                                    <constraint firstAttribute="width" secondItem="7gP-vM-zV3" secondAttribute="height" multiplier="1:1" id="uAK-E9-t7l"/>
+                                </constraints>
                                 <state key="normal" image="pauseButton"/>
                                 <connections>
                                     <action selector="pauseButtonPressed:" destination="IFo-oz-uXX" eventType="touchUpInside" id="Dss-ZG-J14"/>
@@ -195,8 +200,8 @@
                             <constraint firstItem="RkT-DZ-Weq" firstAttribute="top" secondItem="uig-WR-ewc" secondAttribute="top" id="2Bl-dS-JfI"/>
                             <constraint firstItem="WuT-Jt-vvf" firstAttribute="top" secondItem="avb-3R-fZU" secondAttribute="top" constant="10" id="46c-U9-SeL"/>
                             <constraint firstItem="RkT-DZ-Weq" firstAttribute="trailing" secondItem="avb-3R-fZU" secondAttribute="trailing" id="67r-K7-4I6"/>
+                            <constraint firstItem="7gP-vM-zV3" firstAttribute="leading" secondItem="mni-nS-mlY" secondAttribute="trailing" constant="43.5" id="7Q8-tR-bvq"/>
                             <constraint firstItem="vAJ-b3-PJ0" firstAttribute="centerX" secondItem="uig-WR-ewc" secondAttribute="centerX" id="82f-Oi-8pT"/>
-                            <constraint firstItem="7gP-vM-zV3" firstAttribute="leading" secondItem="Myq-qw-TNw" secondAttribute="trailing" constant="-24.5" id="8aK-j9-OeG"/>
                             <constraint firstItem="mni-nS-mlY" firstAttribute="centerX" secondItem="Myq-qw-TNw" secondAttribute="centerX" constant="19.25" id="9CQ-yE-L01"/>
                             <constraint firstItem="RkT-DZ-Weq" firstAttribute="leading" secondItem="avb-3R-fZU" secondAttribute="leading" id="CXz-vk-usc"/>
                             <constraint firstItem="mni-nS-mlY" firstAttribute="centerY" secondItem="Myq-qw-TNw" secondAttribute="centerY" id="F0C-xs-OZM"/>

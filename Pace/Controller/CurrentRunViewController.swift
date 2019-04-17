@@ -50,11 +50,16 @@ class CurrentRunViewController: LocationViewController {
     func startRun(){
         locationManager?.startUpdatingLocation()
         startTimer()
+        pauseButton.setImage(UIImage(named: "pauseButton"), for: .normal)
     }
+    
+    
+    
     
     
     func endRun(){
         locationManager?.stopUpdatingLocation()
+        //add object to realm db
     }
     
     
@@ -80,7 +85,11 @@ class CurrentRunViewController: LocationViewController {
     
 
     @IBAction func pauseButtonPressed(_ sender: Any) {
-        
+        if timer.isValid {
+            pauseRun()
+        }else{
+            startRun()
+        }
     }
     
     
@@ -98,8 +107,7 @@ class CurrentRunViewController: LocationViewController {
                     sliderView.center.x = sliderView.center.x + translation.x
                 } else if sliderView.center.x >= (swipeBackgroundImageView.center.x + maximumAdjust) {
                     sliderView.center.x = swipeBackgroundImageView.center.x + maximumAdjust
-                    //end run code
-                    
+                    endRun()
                     self.dismiss(animated: true, completion: nil)
                 }else{
                     sliderView.center.x = self.swipeBackgroundImageView.center.x - minimumAdjust
@@ -114,6 +122,17 @@ class CurrentRunViewController: LocationViewController {
             return
         }
     }
+    
+    
+    
+    func pauseRun(){
+        lastLocation = nil
+        startLocation = nil
+        timer.invalidate()
+        locationManager?.stopUpdatingLocation()
+        pauseButton.setImage(UIImage(named: "resumeButton"), for: .normal)
+    }
+    
     
     
 }
