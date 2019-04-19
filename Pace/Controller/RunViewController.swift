@@ -11,8 +11,12 @@ import MapKit
 
 class RunViewController: LocationViewController {
     
-    
-    
+    @IBOutlet weak var overLayStackView: UIStackView!
+    @IBOutlet weak var overLayView: UIView!
+    @IBOutlet weak var lastRunCloseButton: UIButton!
+    @IBOutlet weak var averagePaceLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
     
@@ -20,12 +24,12 @@ class RunViewController: LocationViewController {
         super.viewDidLoad()
         checkLocationAuthStatus()
         mapView.delegate = self
-        print("Total Runs \(String(describing: Run.getAllRuns()))")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         locationManager?.delegate = self
         locationManager?.startUpdatingLocation()
+        getLastRun()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -35,6 +39,32 @@ class RunViewController: LocationViewController {
     
     
     @IBAction func centerMapClicked(_ sender: Any) {
+        
+    }
+    
+    
+    
+    @IBAction func lastRunCloseButtonTapped(_ sender: Any) {
+        overLayStackView.isHidden = true
+        overLayView.isHidden = true
+        lastRunCloseButton.isHidden = true
+    }
+    
+    func getLastRun() {
+        guard let lastRun = Run.getAllRuns()?.first else {
+            overLayStackView.isHidden = true
+            overLayView.isHidden = true
+            lastRunCloseButton.isHidden = true
+            return
+        }
+        
+        overLayStackView.isHidden = false
+        overLayView.isHidden = false
+        lastRunCloseButton.isHidden = false
+        
+        averagePaceLabel.text = lastRun.pace.formatTimeToString()
+        distanceLabel.text = "\(lastRun.distance.metersToMiles(places: 2)) mi"
+        durationLabel.text = lastRun.duration.formatTimeToString()
         
     }
     

@@ -33,13 +33,13 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="402.5"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtT-LR-3Bn">
-                                <rect key="frame" x="168" y="30" width="39" height="22"/>
+                                <rect key="frame" x="168.5" y="30" width="38.5" height="22"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                 <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Running" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTU-DZ-j4k">
-                                <rect key="frame" x="151" y="583.5" width="73" height="14.5"/>
+                                <rect key="frame" x="151.5" y="583.5" width="72.5" height="14.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                 <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -58,31 +58,120 @@
                                     <action selector="centerMapClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="VAK-fn-RyK"/>
                                 </connections>
                             </button>
+                            <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52x-DV-sY8">
+                                <rect key="frame" x="0.0" y="72" width="375" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="o02-Wa-BoP"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="CP1-77-rmj">
+                                <rect key="frame" x="16" y="82" width="118" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Run" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hd6-cd-UGC">
+                                        <rect key="frame" x="0.0" y="0.0" width="65.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                        <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="brl-TB-3uX">
+                                        <rect key="frame" x="0.0" y="23.5" width="92.5" height="17"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Pace:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laC-XQ-4EM">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="17"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwG-kc-Fas">
+                                                <rect key="frame" x="65" y="0.0" width="27.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Qmj-MN-H5e">
+                                        <rect key="frame" x="0.0" y="43.5" width="88.5" height="17"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkP-XZ-Fm4">
+                                                <rect key="frame" x="0.0" y="0.0" width="58" height="17"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LL4-MV-Fru">
+                                                <rect key="frame" x="61" y="0.0" width="27.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="zTE-Gk-EBH">
+                                        <rect key="frame" x="0.0" y="63.5" width="118" height="17"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ish-tz-sLE">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="17"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMu-eO-BQE">
+                                                <rect key="frame" x="62" y="0.0" width="56" height="17"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                <color key="textColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iel-Wv-kys">
+                                <rect key="frame" x="327" y="108" width="28" height="28"/>
+                                <state key="normal" image="closeButton"/>
+                                <connections>
+                                    <action selector="lastRunCloseButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ubV-UK-JRg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wtT-LR-3Bn" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="10" id="49t-hR-y9J"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="lTU-DZ-j4k" secondAttribute="bottom" constant="20" id="4WG-yz-zfl"/>
+                            <constraint firstItem="52x-DV-sY8" firstAttribute="top" secondItem="wtT-LR-3Bn" secondAttribute="bottom" constant="20" id="6dw-lk-wPe"/>
                             <constraint firstItem="gav-Xg-nke" firstAttribute="top" secondItem="wtT-LR-3Bn" secondAttribute="bottom" constant="20" id="8cY-G0-K5T"/>
                             <constraint firstItem="lTU-DZ-j4k" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="9Qn-vd-ved"/>
+                            <constraint firstItem="52x-DV-sY8" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="DMO-c0-HzN"/>
                             <constraint firstItem="QCd-QP-D40" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="J1Y-Ou-Lbo"/>
                             <constraint firstItem="QCd-QP-D40" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="Oyv-6h-Zpu"/>
                             <constraint firstItem="lTU-DZ-j4k" firstAttribute="top" secondItem="obR-iN-JwX" secondAttribute="bottom" constant="8" id="P3S-h5-zik"/>
+                            <constraint firstItem="CP1-77-rmj" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="Pda-0r-rII"/>
                             <constraint firstItem="9oM-6U-nxW" firstAttribute="top" secondItem="gav-Xg-nke" secondAttribute="bottom" constant="-75" id="Qgn-Yp-NfJ"/>
+                            <constraint firstItem="CP1-77-rmj" firstAttribute="centerY" secondItem="52x-DV-sY8" secondAttribute="centerY" id="TXy-59-lf6"/>
                             <constraint firstItem="wtT-LR-3Bn" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="UEE-WW-sgc"/>
                             <constraint firstAttribute="bottom" secondItem="QCd-QP-D40" secondAttribute="bottom" id="aIJ-zl-sGm"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="9oM-6U-nxW" secondAttribute="trailing" constant="20" id="gAz-ip-cHV"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="gav-Xg-nke" secondAttribute="trailing" id="goR-za-IXj"/>
+                            <constraint firstItem="iel-Wv-kys" firstAttribute="centerY" secondItem="52x-DV-sY8" secondAttribute="centerY" id="ks5-1Y-SUA"/>
                             <constraint firstItem="obR-iN-JwX" firstAttribute="top" secondItem="gav-Xg-nke" secondAttribute="bottom" constant="30" id="kud-pd-V5W"/>
+                            <constraint firstItem="52x-DV-sY8" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="sFw-iP-T9x"/>
                             <constraint firstItem="QCd-QP-D40" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="sxi-Lv-QEX"/>
                             <constraint firstItem="gav-Xg-nke" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="ujK-yH-ApW"/>
                             <constraint firstItem="obR-iN-JwX" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="xRd-0f-rV4"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="iel-Wv-kys" secondAttribute="trailing" constant="20" id="xwq-MS-EHE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="averagePaceLabel" destination="KwG-kc-Fas" id="Q91-ro-QKc"/>
+                        <outlet property="distanceLabel" destination="LL4-MV-Fru" id="ncc-4F-sll"/>
+                        <outlet property="durationLabel" destination="rMu-eO-BQE" id="4l0-Sz-6nt"/>
+                        <outlet property="lastRunCloseButton" destination="iel-Wv-kys" id="s9r-MY-ncr"/>
                         <outlet property="mapView" destination="gav-Xg-nke" id="Drn-F1-p8w"/>
+                        <outlet property="overLayStackView" destination="CP1-77-rmj" id="uOA-bK-L0Q"/>
+                        <outlet property="overLayView" destination="52x-DV-sY8" id="oOG-Uf-Tot"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -391,6 +480,7 @@
     <resources>
         <image name="BG" width="375" height="667"/>
         <image name="centerNavButton" width="58" height="58"/>
+        <image name="closeButton" width="28" height="28"/>
         <image name="endRunButton" width="57" height="57"/>
         <image name="endRunOutline" width="232" height="75"/>
         <image name="pauseButton" width="75" height="75"/>
