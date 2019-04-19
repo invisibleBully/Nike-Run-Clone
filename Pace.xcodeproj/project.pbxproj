@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		795FA1C922663D58009C490C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FA1C822663D58009C490C /* LocationViewController.swift */; };
+		798B1227226A27E800E671A8 /* RunLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B1226226A27E800E671A8 /* RunLogTableViewCell.swift */; };
+		798B1229226A29B000E671A8 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B1228226A29B000E671A8 /* Date+Extension.swift */; };
 		79A5E1C72265EA9600CB8316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1C62265EA9600CB8316 /* AppDelegate.swift */; };
 		79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1C82265EA9600CB8316 /* RunViewController.swift */; };
 		79A5E1CB2265EA9600CB8316 /* RunLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5E1CA2265EA9600CB8316 /* RunLogViewController.swift */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		394480639F46F77F5DAC0589 /* Pods-Pace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pace/Pods-Pace.debug.xcconfig"; sourceTree = "<group>"; };
 		795FA1C822663D58009C490C /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		798B1226226A27E800E671A8 /* RunLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogTableViewCell.swift; sourceTree = "<group>"; };
+		798B1228226A29B000E671A8 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		79A5E1C32265EA9600CB8316 /* Pace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5E1C62265EA9600CB8316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A5E1C82265EA9600CB8316 /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				79A60DCC22676B1900BCD2F7 /* NumberType+Extension.swift */,
+				798B1228226A29B000E671A8 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 		79A5E1DD2265EE9F00CB8316 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				798B1226226A27E800E671A8 /* RunLogTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,8 +324,10 @@
 			files = (
 				79A60DCB226738CA00BCD2F7 /* CurrentRunViewController.swift in Sources */,
 				79A5E1CB2265EA9600CB8316 /* RunLogViewController.swift in Sources */,
+				798B1227226A27E800E671A8 /* RunLogTableViewCell.swift in Sources */,
 				79A60DCD22676B1900BCD2F7 /* NumberType+Extension.swift in Sources */,
 				79EA84882268C1EB00D8D6B4 /* Constant.swift in Sources */,
+				798B1229226A29B000E671A8 /* Date+Extension.swift in Sources */,
 				79A5E1C72265EA9600CB8316 /* AppDelegate.swift in Sources */,
 				79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */,
 				79EA84862268B29800D8D6B4 /* Run.swift in Sources */,
