@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import RealmSwift
+import Realm
 
 class CurrentRunViewController: LocationViewController {
     
@@ -22,11 +24,12 @@ class CurrentRunViewController: LocationViewController {
     @IBOutlet weak var pauseButton: UIButton!
     var timer = Timer()
     
-    var startLocation: CLLocation!
-    var lastLocation: CLLocation!
-    var runDistance = 0.0
-    var timerCount = 0
-    var pace = 0
+    fileprivate var startLocation: CLLocation!
+    fileprivate var lastLocation: CLLocation!
+    fileprivate var runDistance = 0.0
+    fileprivate var timerCount = 0
+    fileprivate var pace = 0
+    fileprivate var coordinateLocations = List<Location>()
     
     
     
@@ -59,7 +62,7 @@ class CurrentRunViewController: LocationViewController {
     
     func endRun(){
         locationManager?.stopUpdatingLocation()
-        Run.addRunToRealm(pace: pace, distance: runDistance, duration: timerCount)
+        Run.addRunToRealm(pace: pace, distance: runDistance, duration: timerCount, locations: coordinateLocations)
     }
     
     
@@ -152,6 +155,8 @@ extension CurrentRunViewController: CLLocationManagerDelegate {
             startLocation = locations.first
         }else if let location = locations.last {
             runDistance += lastLocation.distance(from: location)
+            let newLocation = Location(latitude: Double(lastLocation.coordinate.latitude), longitude: Double(lastLocation.coordinate.longitude))
+            coordinateLocations.insert(newLocation, at: 0)
             distanceLabel.text = "\(runDistance.metersToMiles(places: 2))"
             if timerCount > 0 && runDistance > 0 {
                 paceLabel.text = calculatePace(time: timerCount, miles: runDistance.metersToMiles(places: 2))
