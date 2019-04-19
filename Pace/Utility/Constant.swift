@@ -10,3 +10,4 @@ import Foundation
 
 
 let REAL_QUEUE = DispatchQueue(label: "realQueue")
+let REALM_RUN_CONFIG = "realmRunConfig"

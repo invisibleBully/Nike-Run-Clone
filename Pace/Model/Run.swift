@@ -51,7 +51,7 @@ class Run: Object {
         let runObject = Run(pace: pace, distance: distance, duration: duration, locations: locations)
         REAL_QUEUE.sync {
             do {
-                let realm = try Realm()
+                let realm = try Realm(configuration: RealmConfig.runDataConfig)
                 try realm.write {
                     realm.add(runObject)
                     try realm.commitWrite()
@@ -66,7 +66,7 @@ class Run: Object {
     
     static func getAllRuns() -> Results<Run>? {
         do {
-            let realm = try Realm()
+            let realm = try Realm(configuration: RealmConfig.runDataConfig)
             var runs = realm.objects(Run.self)
             runs = runs.sorted(byKeyPath: "date", ascending: true)
             return runs

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		790F16F6226A4E54006F33F7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F16F5226A4E54006F33F7 /* Location.swift */; };
+		790F16F8226A51F0006F33F7 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F16F7226A51F0006F33F7 /* RealmConfig.swift */; };
 		795FA1C922663D58009C490C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FA1C822663D58009C490C /* LocationViewController.swift */; };
 		798B1227226A27E800E671A8 /* RunLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B1226226A27E800E671A8 /* RunLogTableViewCell.swift */; };
 		798B1229226A29B000E671A8 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B1228226A29B000E671A8 /* Date+Extension.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		394480639F46F77F5DAC0589 /* Pods-Pace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pace/Pods-Pace.debug.xcconfig"; sourceTree = "<group>"; };
 		790F16F5226A4E54006F33F7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		790F16F7226A51F0006F33F7 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		795FA1C822663D58009C490C /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		798B1226226A27E800E671A8 /* RunLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogTableViewCell.swift; sourceTree = "<group>"; };
 		798B1228226A29B000E671A8 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				79EA84872268C1EB00D8D6B4 /* Constant.swift */,
+				790F16F7226A51F0006F33F7 /* RealmConfig.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */,
 				79EA84862268B29800D8D6B4 /* Run.swift in Sources */,
 				795FA1C922663D58009C490C /* LocationViewController.swift in Sources */,
+				790F16F8226A51F0006F33F7 /* RealmConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
