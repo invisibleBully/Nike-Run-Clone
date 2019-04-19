@@ -14,19 +14,18 @@ import Realm
 
 class Run: Object {
     
-    dynamic public private(set) var id = ""
-    dynamic public private(set) var date = NSDate()
-    dynamic public private(set) var pace = 0
-    dynamic public private(set) var distance = 0.0
-    dynamic public private(set) var duration = 0
+    @objc dynamic var id = ""
+    @objc dynamic var date = NSDate()
+    @objc dynamic var pace = 0
+    @objc dynamic var distance = 0.0
+    @objc dynamic var duration = 0
     
-    override class func primaryKey() -> String{
+    override static func primaryKey() -> String? {
         return "id"
     }
     
     
-    override class func indexedProperties() -> [String] {
-        
+    override static func indexedProperties() -> [String] {
         return [
             "pace",
             "date",
@@ -36,13 +35,42 @@ class Run: Object {
     
     convenience init(pace: Int, distance: Double, duration: Int) {
         self.init()
-        self.id = UUID().uuidString.lowercased()
+        self.id =  UUID().uuidString.lowercased()
         self.date = NSDate()
         self.pace = pace
         self.distance = distance
         self.duration = duration
     }
     
+    
+    static func addRunToRealm(pace: Int, distance: Double, duration: Int){
+        //create realm instance for everytime to write and everytime you read
+        let runObject = Run(pace: pace, distance: distance, duration: duration)
+        REAL_QUEUE.sync {
+            do {
+                let realm = try Realm()
+                try realm.write {
+                    realm.add(runObject)
+                    try realm.commitWrite()
+                    debugPrint("Added Run Object To Realm...")
+                }
+            }catch{
+                debugPrint("Error Adding Run Object To Realm...")
+            }
+        }
+    }
+    
+    
+    static func getAllRuns() -> Results<Run>? {
+        do {
+            let realm = try Realm()
+            var runs = realm.objects(Run.self)
+            runs = runs.sorted(byKeyPath: "date", ascending: true)
+            return runs
+        }catch{
+            return nil
+        }
+    }
     
     
 }

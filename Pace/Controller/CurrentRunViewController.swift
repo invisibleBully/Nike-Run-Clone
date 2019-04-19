@@ -59,7 +59,7 @@ class CurrentRunViewController: LocationViewController {
     
     func endRun(){
         locationManager?.stopUpdatingLocation()
-        //add object to realm db
+        Run.addRunToRealm(pace: pace, distance: runDistance, duration: timerCount)
     }
     
     

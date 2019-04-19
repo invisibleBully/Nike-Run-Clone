@@ -27,6 +27,7 @@
 		79A60DCB226738CA00BCD2F7 /* CurrentRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A60DCA226738CA00BCD2F7 /* CurrentRunViewController.swift */; };
 		79A60DCD22676B1900BCD2F7 /* NumberType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A60DCC22676B1900BCD2F7 /* NumberType+Extension.swift */; };
 		79EA84862268B29800D8D6B4 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA84852268B29800D8D6B4 /* Run.swift */; };
+		79EA84882268C1EB00D8D6B4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA84872268C1EB00D8D6B4 /* Constant.swift */; };
 		CCA6FD9085B51DE975BD9681 /* Pods_Pace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB51A659F7B6C7A75C85F06D /* Pods_Pace.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		79A60DCA226738CA00BCD2F7 /* CurrentRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunViewController.swift; sourceTree = "<group>"; };
 		79A60DCC22676B1900BCD2F7 /* NumberType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberType+Extension.swift"; sourceTree = "<group>"; };
 		79EA84852268B29800D8D6B4 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		79EA84872268C1EB00D8D6B4 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		EB068EFD6347ABF710D541F3 /* Pods-Pace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pace.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pace/Pods-Pace.release.xcconfig"; sourceTree = "<group>"; };
 		FB51A659F7B6C7A75C85F06D /* Pods_Pace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 		79A5E1DC2265EE7F00CB8316 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				79EA84872268C1EB00D8D6B4 /* Constant.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				79A60DCB226738CA00BCD2F7 /* CurrentRunViewController.swift in Sources */,
 				79A5E1CB2265EA9600CB8316 /* RunLogViewController.swift in Sources */,
 				79A60DCD22676B1900BCD2F7 /* NumberType+Extension.swift in Sources */,
+				79EA84882268C1EB00D8D6B4 /* Constant.swift in Sources */,
 				79A5E1C72265EA9600CB8316 /* AppDelegate.swift in Sources */,
 				79A5E1C92265EA9600CB8316 /* RunViewController.swift in Sources */,
 				79EA84862268B29800D8D6B4 /* Run.swift in Sources */,

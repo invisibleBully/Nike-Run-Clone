@@ -20,6 +20,7 @@ class RunViewController: LocationViewController {
         super.viewDidLoad()
         checkLocationAuthStatus()
         mapView.delegate = self
+        print("Total Runs \(String(describing: Run.getAllRuns()))")
     }
     
     override func viewWillAppear(_ animated: Bool) {
