@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import Realm
+import RealmSwift
 
 class RunViewController: LocationViewController {
     
@@ -26,6 +28,7 @@ class RunViewController: LocationViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         mapView.delegate = self
         locationManager?.delegate = self
         locationManager?.startUpdatingLocation()
@@ -47,7 +50,7 @@ class RunViewController: LocationViewController {
     
     
     @IBAction func centerMapClicked(_ sender: Any) {
-        
+        centerMapOnUserLocation()
     }
     
     
@@ -56,6 +59,38 @@ class RunViewController: LocationViewController {
         overLayStackView.isHidden = true
         overLayView.isHidden = true
         lastRunCloseButton.isHidden = true
+        centerMapOnUserLocation()
+    }
+    
+    
+    
+    
+    func centerMapOnUserLocation() {
+        mapView.userTrackingMode = .follow
+        let coordinateRegion = MKCoordinateRegion(center: mapView.userLocation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    
+    func centerMapOnPreviousRoute(locations: List<Location>) -> MKCoordinateRegion{
+        guard let initialLoc = locations.first else {
+            return MKCoordinateRegion()
+        }
+        var minLat = initialLoc.latitude
+        var minLong = initialLoc.longitude
+        var maxLat = minLat
+        var maxLong = minLong
+        
+        
+        
+        for location in locations {
+            minLat = min(minLat, location.latitude)
+            minLong = min(minLong, location.longitude)
+            maxLat = max(maxLat, location.latitude)
+            maxLong = max(maxLong, location.longitude)
+        }
+        
+        return MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: (minLat + maxLat)/2, longitude: (minLong + maxLong)/2), span: MKCoordinateSpan(latitudeDelta: (maxLat - minLat) * 1.4, longitudeDelta: (maxLong - minLong) * 1.4))
     }
     
     
@@ -63,7 +98,7 @@ class RunViewController: LocationViewController {
     func setUpMapView(){
         if let overlay = addLastRunToMap() {
             if mapView.overlays.count > 0{
-                mapView.removeOverlay(mapView!.overlays as! MKOverlay)
+                mapView.removeOverlays(mapView!.overlays)
             }
             mapView.addOverlay(overlay)
             overLayStackView.isHidden = false
@@ -73,9 +108,10 @@ class RunViewController: LocationViewController {
             overLayStackView.isHidden = true
             overLayView.isHidden = true
             lastRunCloseButton.isHidden = true
+            centerMapOnUserLocation()
+            
         }
     }
-    
     
     
     
@@ -94,6 +130,11 @@ class RunViewController: LocationViewController {
         for location in lastRun.locations {
             coordinates.append(CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
         }
+        
+        
+        mapView.userTrackingMode = .none
+        mapView.setRegion(centerMapOnPreviousRoute(locations: lastRun.locations), animated: true)
+        
         
         return MKPolyline(coordinates: coordinates, count: lastRun.locations.count)
     }
@@ -123,8 +164,5 @@ extension RunViewController: CLLocationManagerDelegate {
         
         return renderer
     }
-    
-    
-    
-    
+
 }

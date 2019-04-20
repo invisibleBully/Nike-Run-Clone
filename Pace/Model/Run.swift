@@ -68,7 +68,7 @@ class Run: Object {
         do {
             let realm = try Realm(configuration: RealmConfig.runDataConfig)
             var runs = realm.objects(Run.self)
-            runs = runs.sorted(byKeyPath: "date", ascending: true)
+            runs = runs.sorted(byKeyPath: "date", ascending: false)
             return runs
         }catch{
             return nil
