@@ -76,7 +76,6 @@ class CurrentRunViewController: LocationViewController {
     
     func calculatePace(time seconds: Int, miles: Double) -> String{
         pace = Int(Double(seconds) / miles)
-        print("Pace: \(pace)")
         return pace.formatTimeToString()
     }
     
